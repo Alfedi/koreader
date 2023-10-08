@@ -506,6 +506,12 @@ local PocketBook617 = PocketBook:extend{
     hasNaturalLight = yes,
 }
 
+-- PocketBook Basic Lux 4 (618)
+local PocketBook618 = PocketBook:extend{
+   model = "PB618",
+   hasNaturalLightApi = no,
+   canReboot = no,
+}
 -- PocketBook Touch (622)
 local PocketBook622 = PocketBook:extend{
     model = "PBTouch",
@@ -768,7 +774,9 @@ elseif codename == "PB616" or codename == "PB616W" or
     codename == "PocketBook 616" or codename == "PocketBook 616W" then
     return PocketBook616
 elseif codename == "PB617" or codename == "PocketBook 617" then
-    return PocketBook617
+   return PocketBook617
+elseif codename == "PB618" then
+   return PocketBook618
 elseif codename == "PocketBook 622" then
     return PocketBook622
 elseif codename == "PocketBook 623" then
